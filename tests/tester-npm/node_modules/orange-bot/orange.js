@@ -1,14 +1,23 @@
 const colors = require("./orangecolors.json")
 
 class OrangeLogger {
+    /** @type {String} */
     name = "";
+    /** @type {Boolean} */
     time24 = true;
 
+    /**
+     * @param {String} name - The name which will show up when logging to console. Useful for bigger projects.
+     * @param {Boolean} [time24=true] - Specifies if the logger should use 24 hour format (true) or 12 hour format (false). Defaults to true (24 hour format).
+     */
     constructor(name, time24 = true) {
         this.name = name
         this.time24 = time24
     }
 
+    /**
+     * @param {String} message - The message that will be sent to the console in the info-channel. Orange Color Codes will work here.
+     */
     log(message) {
         let logMsg = " " + OrangeUtils.format(message.toString())
         let date = new Date()
@@ -20,6 +29,9 @@ class OrangeLogger {
         console.log(info + OrangeUtils.format(`&f[${this.name}]`) + logMsg)
     }
 
+    /**
+     * @param {String} message - The message that will be sent to the console in the warn-channel. Orange Color Codes will work here.
+     */
     warn(message) {
         let logMsg = " " + OrangeUtils.format(message.toString())
         let date = new Date()
@@ -31,6 +43,9 @@ class OrangeLogger {
         console.log(info + OrangeUtils.format(`&e[${this.name}]`) + logMsg)
     }
 
+    /**
+     * @param {String} message - The message that will be sent to the console in the err-channel. Orange Color Codes will work here.
+     */
     error(message) {
         let logMsg = " " + OrangeUtils.format(message.toString())
         let date = new Date()
@@ -44,6 +59,10 @@ class OrangeLogger {
 }
 
 class OrangeUtils {
+    /**
+     * @param {String} message - Formats the inputted message to work with Orange Color Codes (includes message formatting, for example bold text).
+     * @returns {String} The formatted text, for use in console.
+     */
     static format(message) {
         let msg = "&r".concat(message)
         msg += "&r"
@@ -71,6 +90,10 @@ class OrangeUtils {
         return msg
     }
 
+    /**
+     * @param {String} str - ANSI-codes for terminal, use ";" between the codes, if multiple.
+     * @returns {String} Returns the ANSI-codes as a stdout command.
+     */
     static terminalEscape(str) {
         return `\x1B[${str}m`
     }

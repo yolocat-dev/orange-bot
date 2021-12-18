@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "orange-bot": "^1.0.0"
+    "orange-bot": "^1.0.1"
   }
 }
