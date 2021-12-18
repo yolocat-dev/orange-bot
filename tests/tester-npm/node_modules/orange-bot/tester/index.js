@@ -1,0 +1,5 @@
+const Orange = require('orange-bot')
+const logger = new Orange.OrangeLogger("Tester")
+logger.log("&aSuccessfully connected to &bMySQL&a!")
+logger.warn("&aSuccessfully connected to &bMySQL&a!")
+logger.error("&aSuccessfully connected to &bMySQL&a!")

@@ -1,0 +1,8 @@
+# Don't download modules except from dependencies (as they are already downloaded)
+node_modules
+
+# Don't download tests folder (only dev folder)
+tests
+
+# No editor stuff (lol)
+.vscode

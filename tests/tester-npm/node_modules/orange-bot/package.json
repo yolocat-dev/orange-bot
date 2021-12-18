@@ -1,0 +1,39 @@
+{
+  "name": "orange-bot",
+  "version": "1.0.0",
+  "description": "A Discord.JS bot command handler and makes creating bots easier than ever!",
+  "main": "orange.js",
+  "scripts": {
+    "test": "echo \"Please follow the tutorials for more information on how to create a bot with Orange.\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yolocat-dev/orange-bot.git"
+  },
+  "keywords": [
+    "discord",
+    "discord.js",
+    "discordjs",
+    "discordbot",
+    "bot",
+    "javascript",
+    "easy",
+    "js",
+    "make",
+    "npm",
+    "package",
+    "yolocat",
+    "yolocat.bot",
+    "dev",
+    "yolocat.dev"
+  ],
+  "author": "yolocat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yolocat-dev/orange-bot/issues"
+  },
+  "homepage": "https://github.com/yolocat-dev/orange-bot#readme",
+  "dependencies": {
+    "discord.js": "^13.3.1"
+  }
+}
