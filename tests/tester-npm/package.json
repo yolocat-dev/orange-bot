@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "orange-bot": "^1.1.1"
+    "orange-bot": "^1.1.2"
   },
   "devDependencies": {
     "typescript": "^4.5.4"
