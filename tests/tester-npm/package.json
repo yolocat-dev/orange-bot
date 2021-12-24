@@ -8,10 +8,10 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "orange-bot": "^1.1.2"
-  },
   "devDependencies": {
     "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "orange-bot": "^1.1.2"
   }
 }
