@@ -1,7 +1,7 @@
 const colors = require("./orangecolors.json")
 const fs = require('fs')
 const DiscordJS = require('discord.js')
-const orangeLogger;
+const orangeLogger = new OrangeLogger("orange");
 const Cryptr = require('cryptr')
 
 class OrangeLogger {
