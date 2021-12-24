@@ -1,4 +1,8 @@
 const colors = require("./orangecolors.json")
+const fs = require('fs')
+const DiscordJS = require('discord.js')
+const orangeLogger;
+const Cryptr = require('cryptr')
 
 class OrangeLogger {
     /** @type {String} */
@@ -99,4 +103,44 @@ class OrangeUtils {
     }
 }
 
-module.exports = { OrangeLogger, OrangeUtils }
+/**
+ * @param {fs.PathLike} modulePath - The path to the .orange file.
+ * @returns {string} The JS script decompiled to a string.
+ */
+function getModule(modulePath) {
+    let read = fs.readFileSync(modulePath).toString()
+    let eKey = read.split("*")[0]
+    let key = new Cryptr("orange").decrypt(eKey)
+    let eModule = read.split("*")[1]
+    return new Cryptr(key).decrypt(eModule)
+}
+
+class Orange {
+    /**
+     * @param {DiscordJS.Client} client - Your instance of your bot.
+     * @param {boolean} [time24] - What time format Orange's default logger should be. Defaults to true.
+     */
+    constructor(client, time24 = true) {
+        orangeLogger = new OrangeLogger("Orange", time24)
+        if(!fs.existsSync("/orange-modules/")) {
+            fs.mkdirSync("/orange-modules/")
+        }
+        const modules = fs.readdirSync("/orange-modules/").filter(file => file.endsWith(".orange"))
+        let modulesCount = 0
+        for(const file of modules) {
+            let module = getModule("/orange-modules/" + file)
+            let run = new Function(module + "\nrun()")
+            let name = new Function(module + "\nreturn name")()
+            let version = new Function(module + "\nreturn version")()
+            let author = new Function(module + "\nreturn author")()
+            new OrangeLogger(name, time24).log("&fLoading &av" + version + " &fby &a" + author + "&f.")
+            run()
+            modulesCount++
+        }
+        orangeLogger.log("&fLoaded &b" + modulesCount + "&f modules.")
+    }
+
+    Logger = OrangeLogger
+}
+
+module.exports = Orange
