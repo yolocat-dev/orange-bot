@@ -1,6 +1,6 @@
 {
   "name": "tester-npm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "orange-bot": "^1.0.1"
+    "orange-bot": "^1.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
   }
 }
