@@ -2,4 +2,4 @@
 .vscode
 
 # No tests
-tests
+tests/
