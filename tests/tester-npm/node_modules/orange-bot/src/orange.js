@@ -1,7 +1,6 @@
 const colors = require("./orangecolors.json")
 const fs = require('fs')
 const DiscordJS = require('discord.js')
-const orangeLogger = new OrangeLogger("orange");
 const Cryptr = require('cryptr')
 
 class OrangeLogger {
@@ -121,7 +120,7 @@ class Orange {
      * @param {boolean} [time24] - What time format Orange's default logger should be. Defaults to true.
      */
     constructor(client, time24 = true) {
-        orangeLogger = new OrangeLogger("Orange", time24)
+        const orangeLogger = new OrangeLogger("Orange", time24)
         if(!fs.existsSync("/orange-modules/")) {
             fs.mkdirSync("/orange-modules/")
         }
