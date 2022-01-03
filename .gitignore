@@ -1,2 +1,5 @@
 # No editor stuff (lol)
 .vscode
+
+# No tests
+tests
