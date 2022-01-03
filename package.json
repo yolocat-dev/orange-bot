@@ -34,7 +34,6 @@
   },
   "homepage": "https://github.com/yolocat-dev/orange-bot#readme",
   "dependencies": {
-    "cryptr": "^6.0.2",
     "discord.js": "^13.3.1"
   }
 }

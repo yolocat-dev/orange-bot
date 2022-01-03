@@ -6,3 +6,6 @@ tests
 
 # No editor stuff (lol)
 .vscode
+
+# No more tsconfig.json (haha you stupid file)
+tsconfig.json
