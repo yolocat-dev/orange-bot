@@ -3,6 +3,9 @@ node_modules
 
 # Don't download tests folder (only dev folder)
 tests
+tests/
+/tests
+/tests/
 
 # No editor stuff (lol)
 .vscode

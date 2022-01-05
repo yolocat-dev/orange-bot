@@ -3,3 +3,6 @@
 
 # No tests
 tests/
+tests
+/tests
+/tests/
