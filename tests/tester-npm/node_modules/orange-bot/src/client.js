@@ -7,11 +7,11 @@ class Client extends DiscordJS.Client {
     database
 
     /**
-    * @param {ClientOptions} options Options for the client
-    */
+     * @param {ClientOptions} options Options for the client
+     */
     constructor(options) {
         if(options && options.mongoUrl && options.mongoUrl != null && typeof options != 'undefined') {
-            // database = 
+            database = new Database(mongoUrl)
         }
 
         super(options)
