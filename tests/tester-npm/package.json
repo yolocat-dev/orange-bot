@@ -12,6 +12,6 @@
     "typescript": "^4.5.4"
   },
   "dependencies": {
-    "orange-bot": "^1.2.5"
+    "orange-bot": "^1.2.7"
   }
 }
