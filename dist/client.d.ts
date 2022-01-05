@@ -8,10 +8,8 @@ declare class Client extends DiscordJS.Client<boolean> {
     database: Database;
 }
 
-interface ClientOptions extends DiscordJS.ClientOptions {
-    mongoUrl?: string | URL
-}
-
 import DiscordJS = require("discord.js");
 import Database = require("./database");
+import { ClientOptions } from "./main";
+
 //# sourceMappingURL=client.d.ts.map

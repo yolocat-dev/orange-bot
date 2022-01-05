@@ -1,10 +1,13 @@
 export = Database;
-declare class Database extends mongoose {
+declare class Database extends mongoose.Mongoose {
     /**
      * @param {string | URL} mongoUrl
-     * @param {mongoose.MongooseOptions} options
+     * @param {DatabaseOptions} options
      */
-    constructor(mongoUrl: string | URL, options?: mongoose.MongooseOptions);
+    constructor(mongoUrl: string | URL, options?: DatabaseOptions);
+    static DatabaseOptions: DatabaseOptions
 }
+
+import { DatabaseOptions } from "./main";
 import mongoose = require("mongoose");
 //# sourceMappingURL=database.d.ts.map
