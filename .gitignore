@@ -2,7 +2,14 @@
 .vscode
 
 # No tests
-tests/
-tests
-/tests
-/tests/
+/orange-bot/tests/
+orange-bot/tests
+/orange-bot/tests
+orange-bot/tests/
+orange-bot/tests
+orange-bot/tests/**/*
+orange-bot/tests/tester-npm/
+orange-bot/tests/tester/
+
+# No pesky files
+.DS_Store
