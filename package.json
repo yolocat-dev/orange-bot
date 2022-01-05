@@ -2,7 +2,7 @@
   "name": "orange-bot",
   "version": "1.2.4",
   "description": "A Discord.JS bot command handler and makes creating bots easier than ever!",
-  "main": "src/orange.js",
+  "main": "src/main.js",
   "scripts": {
     "test": "echo \"Please follow the tutorials for more information on how to create a bot with Orange.\" && exit 1"
   },
