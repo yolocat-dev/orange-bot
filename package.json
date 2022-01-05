@@ -4,7 +4,10 @@
   "description": "A Discord.JS bot command handler and makes creating bots easier than ever!",
   "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Please follow the tutorials for more information on how to create a bot with Orange.\" && exit 1"
+    "test": "echo \"Please follow the tutorials for more information on how to create a bot with Orange.\" && exit 1",
+    "ppa": "git add . && git commit -m \"update yaaaass\" && git push && git pull && git fetch && npm version patch && npm publish && cd tests/tester-npm && npm uninstall orange-bot && npm i orange-bot && cd ../..",
+    "pmi": "git add . && git commit -m \"update yaAAasS\" && git push && git pull && git fetch && npm version minor && npm publish && cd tests/tester-npm && npm uninstall orange-bot && npm i orange-bot && cd ../..",
+    "pma": "git add . && git commit -m \"update YAAAASS\" && git push && git pull && git fetch && npm version major && npm publish && cd tests/tester-npm && npm uninstall orange-bot && npm i orange-bot && cd ../.."
   },
   "repository": {
     "type": "git",
